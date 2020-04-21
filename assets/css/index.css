@@ -1,0 +1,310 @@
+:root {
+    --color1: white;
+    --color2: rgba(1, 1, 1, 0);
+    --color3: black;
+    --box-shadow2: 0px 10px 20px rgba(1,1,1,0.5);
+	--box-shadow1: 0px 10px 20px rgba(1,1,1,0);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    box-sizing: border-box;
+    width: 100%;
+}
+/*LOADING PAGE*/
+
+.loading {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+}
+.loading img {
+	animation: anim 1.5s infinite;
+}
+@keyframes anim {
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+/*MAIN PAGE*/
+.mainpage {
+	display: none;
+	opacity: 0;
+	transition: opacity 2s ease-in;
+}
+p {
+    color: grey;
+}
+
+.stick {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    background-color: var(--color2);
+    box-shadow: var(--box-shadow1);
+    transition: all 0.7s;
+
+}
+
+nav > div {
+    display: flex;
+}
+
+nav a {
+    text-transform: uppercase;
+    font-family: Haettenschweiler;
+    font-size: 25px;
+    color: white;
+    letter-spacing: 5px;
+    margin: 5px 0px 0px 10px;
+    color: white;
+}
+
+nav a h3 {
+    color: var(--color1);
+}
+
+nav .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(1, 1, 1, 0.3);
+    width: 0;
+    height: 100vh;
+    z-index: 1;
+    transition: 0.8s ease-out;
+    overflow: hidden;
+
+}
+
+.overlay-content > a {
+    margin-left: 75%;
+    margin-top: 10%;
+    transform: scale(1.2);
+}
+
+nav span {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+}
+nav .closebtn:hover {
+    color: grey;
+}
+nav span:hover {
+    cursor: pointer;
+}
+
+nav .overlay .overlay-content {
+    width: 350px;
+    height: 100%;
+    background-color: white;
+    position: inherit;
+    right: 0px;
+}
+
+.overlay-content div {
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.overlay-content a {
+    padding: 8px;
+    text-transform: none;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-family: sans-serif;
+    letter-spacing: 0px;
+}
+.overlay-content a:hover {
+    color: grey;
+}
+.overlay-content a:active {
+	color: red;
+}
+.overlay-content a button {
+	background-color: red;
+	color: white;
+	border: none;
+	transition: 0.2s;
+
+}
+.overlay-content a button:hover {
+	background-color: white;
+	border: 2px solid red;
+	color: red;
+}
+.dark-body {
+    width: 100%;
+    height: 180vh;
+    background-color: black;
+    border-bottom-right-radius: 200px;
+    z-index: -1;
+}
+
+section {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.menu span {
+    transform: scale(1.5);
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: black;
+    text-decoration: none;
+    z-index: 2;
+}
+
+/*dropdown Menu*/
+section .row {
+    position: absolute;
+    top: 20%;
+    height: ;
+    padding: 20px;
+    z-index: 0;
+    width: 100%;
+}
+
+.row .carousel-img {
+    box-shadow: 0px 10px 30px rgba(1, 1, 1, 0.5);
+    border-top-left-radius: 50%;
+    overflow: hidden;
+}
+
+.text {
+    color: white;
+}
+
+.text h1 {
+    text-transform: uppercase;
+    font-family: Haettenschweiler;
+    letter-spacing: 3px;
+    font-size: 3rem;
+}
+
+.text p {
+    font-size: 1.3rem;
+    line-height: 30px;
+    color: grey;
+}
+
+button {
+	padding: 15px 40px;
+    border-radius: 5px;	    
+}
+.text button {
+    margin-top: 20px;
+    background-color: inherit;
+    color: white;
+    border: 2px solid white;
+    transition: 0.5s;
+
+}
+
+.text button:hover {
+    background-color: white;
+    color: black;
+}
+
+footer {
+    height: auto;
+    clear: both;
+    background-color: rgba(240, 240, 240, 1);
+    padding: 100px 30px;
+}
+
+footer::before {
+    clear: both;
+}
+
+footer h5 {
+    margin-bottom: 20px;
+    font-family: Haettenschweiler;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+footer .row div:nth-child(2) {
+	margin-left: 100px;
+}
+footer .row div:nth-child(3) {
+	margin-left: -100px;
+}
+
+footer .row div:nth-child(2) a,
+footer .row div:nth-child(2) a:hover {
+    display: block;
+    line-height: 30px;
+    color: grey;
+    text-decoration: none;
+}
+
+footer button {
+    border: 1px solid black;
+    background-color: inherit;
+    transition: 0.5s;
+}
+
+footer button:hover {
+    background-color: black;
+    color: white;
+}
+
+footer div.container {
+    padding: 50px 0px 0px 0px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width: 500px) {
+    nav .overlay .overlay-content {
+       width: 200px; 
+    }
+    .overlay-content a button {
+        padding: 10px 30px;
+    }
+	nav img, nav h3 {
+		transform: scale(0.8);
+	}
+    .dark-body {
+        height: 240vh;
+    }
+
+    section .row .carousel {
+        text-align: center;
+    }
+
+    .row .carousel-img {
+        margin-top: 100px;
+    }
+    footer .row div:nth-child(2), footer .row div:nth-child(3) {
+    	margin-left: auto;
+    }
+}
